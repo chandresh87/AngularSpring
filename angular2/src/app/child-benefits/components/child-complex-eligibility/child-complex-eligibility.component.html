@@ -1,0 +1,53 @@
+<app-heading text="Chb Complex Eligibiltity - EU Legislation"></app-heading>
+<app-subheading text="Claimants's last address in Other Member State"></app-subheading>
+
+<form [formGroup]="validationForm" (ngSubmit)="onSubmit()">
+    
+    <div class="row">
+    
+        <div class="col-md-6 col-xs-12">
+
+            <!-- Line 1 -->
+            <div class="form-group">
+                <label for="inputline1" class="control-label">Line 1</label>
+                <input type="text" class="form-control" formControlName="line1" placeholder="Line 1" required>
+                <app-alert *ngIf="formErrors.line1" type="danger" text="{{formErrors.line1}}"></app-alert>
+            </div>
+
+            <!-- Line 2 -->
+            <div class="form-group">
+                <label for="inputline2" class="control-label">Line 2</label>
+                <input type="text" class="form-control" formControlName="line2" placeholder="Line 2" required>
+                <app-alert *ngIf="formErrors.line2" type="danger" text="{{formErrors.line2}}"></app-alert>
+            </div>
+
+            <!-- Line 3 -->
+            <div class="form-group">
+                <label for="inputline3" class="control-label">Line 3</label>
+                <input type="text" class="form-control" formControlName="line3" placeholder="Line 3" required>
+                <app-alert *ngIf="formErrors.line3" type="danger" text="{{formErrors.line3}}"></app-alert>
+            </div>
+
+            <!-- Line 4 -->
+            <div class="form-group">
+                <label for="inputline4" class="control-label">Line 4</label>
+                <input type="text" class="form-control" formControlName="line4" placeholder="Line 4" required>
+                <app-alert *ngIf="formErrors.line4" type="danger" text="{{formErrors.line4}}"></app-alert>
+            </div>
+
+            <!-- Postcode -->
+            <div class="form-group">
+                <label for="postcode" class="control-label">Postcode</label>
+                <input type="text" class="form-control" formControlName="postcode" placeholder="Postcode" required>
+                <app-alert *ngIf="formErrors.postcode" type="danger" text="{{formErrors.postcode}}"></app-alert>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <app-alert *ngIf="formSubmittedMessage" type="success" text="{{formSubmittedMessage}}"></app-alert>
+    <app-form-actions [group]="validationForm" parentPath="/child-benefits"></app-form-actions>
+
+</form>
+<!-- End of Form -->

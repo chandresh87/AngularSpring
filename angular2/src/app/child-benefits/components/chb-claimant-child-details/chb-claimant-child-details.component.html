@@ -1,0 +1,383 @@
+<app-heading text="Chb Claimant Child Details"></app-heading>
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1"><span  class="label">  <b>Name and Birth Details  </b>  </span></a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <table class="table table-borderless">
+          <tr>
+            <td colspan="2" style="font-weight:bold"> <span>Current Name</span> </td>
+            <td colspan="5" style="font-weight:bold">Name on the Birth Certificate</td>
+          </tr>
+          <tr>
+            <td> <label for="Surname" class="col-form-label">Surname </label> </td>
+            <td> <input type="text" class="form-control col-sm-7" [(ngModel)]="chBClaimantDetails.birthDetail.surname"></td>
+            <td> <label for="Surname" class="col-form-label">Surname </label> </td>
+            <td><input type="text" class="form-control col-sm-7" [(ngModel)]="chBClaimantDetails.birthDetail.certSurname"></td>
+          </tr>
+          <tr>
+            <td> <label for="Forename" class="col-form-label">Forename </label> </td>
+            <td><input type="text" class="form-control col-sm-7" [(ngModel)]="chBClaimantDetails.birthDetail.forename"></td>
+            <td><label for="Forename" class="col-form-label">Forename </label></td>
+            <td><input type="text" class="form-control col-sm-7" [(ngModel)]="chBClaimantDetails.birthDetail.certForename"></td>
+          </tr>
+          <tr>
+            <td><label for="Other Forename" class="col-form-label">Other Forename </label> </td>
+            <td><input type="text" class="form-control col-sm-7" [(ngModel)]="chBClaimantDetails.birthDetail.otherForeName"></td>
+            <td><label for="Other Forename" class="col-form-label">Other Forename </label></td>
+            <td><input type="text" class="form-control col-sm-7" [(ngModel)]="chBClaimantDetails.birthDetail.certOtherForeName"></td>
+          </tr>
+          <tr>
+            <td><label for="Date Of Birth" class="col-form-label">Date Of Birth </label> </td>
+            <td><input type="text" class="form-control col-sm-7" disabled="disabled" [(ngModel)]="chBClaimantDetails.birthDetail.dateOfBirth"></td>
+            <td> <label for="Verified" class="col-form-label">Verified </label> </td>
+            <td><input type="checkbox" [(ngModel)]="chBClaimantDetails.birthDetail.verified"></td>
+          </tr>
+          <tr>
+            <td><label for="Gender" class="col-form-label">Gender</label> </td>
+            <td>
+              <select disabled="disabled" [(ngModel)]="chBClaimantDetails.birthDetail.gender" class="form-control col-sm-7 input-sm">
+<option value="Male">Male</option>
+  <option value="Female">Female</option>
+   </select>
+            </td>
+            <td><label class="col-form-label">Is this child the claimant's own child ?</label> </td>
+            <td><input type="checkbox" [(ngModel)]="chBClaimantDetails.birthDetail.claimaintOwnChild" class="checkbox"></td>
+          </tr>
+          <tr>
+            <td> <label for="Birth Number" class="col-form-label">Birth Number</label></td>
+            <td><input type="text" class="form-control col-sm-7" [(ngModel)]="chBClaimantDetails.birthDetail.birthNumber" disabled="disabled"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion12" href="#collapse2"> <span class="label">  <b>Basic Eligibilty Details- Child </b>  </span></a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <table class="table table-borderless">
+          <tr>
+            <td> <label for="Birth Number" class="col-form-label">Child born in UK</label> </td>
+            <td> <input type="checkbox" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childBornInUk"></td>
+            <td><label for="Birth Number" class="col-form-label">Claimant incurs expenditure</label> </td>
+            <td> <input type="checkbox" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.claimIncursExpenditure"></td>
+          </tr>
+          <tr>
+            <td><label for="Birth Number" class="col-form-label">Child lives in UK</label> </td>
+            <td> <input type="checkbox" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childLivesInUk"></td>
+            <td> <label for="Birth Number" class="col-form-label">Child is being looked after</label> </td>
+            <td> <input type="checkbox" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childHasBeenLookedAfter"></td>
+          </tr>
+          <tr>
+            <td><label for="Birth Number" class="col-form-label">Child's nationality</label> </td>
+            <td> <input type="text" class="form-control col-sm-7" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childNationality"></td>
+            <td> <label for="Birth Number" class="col-form-label">From:</label> </td>
+            <td> <input type="text" class="form-control col-sm-7" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childHasBeenLookedAfterFrom"></td>
+          </tr>
+          <tr>
+            <td><label for="Birth Number" class="col-form-label"> Date of Arrival </label></td>
+            <td> <input type="text" class="form-control col-sm-7" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.dateOfArrival"></td>
+            <td><label for="Birth Number" class="col-form-label"> Child lives away from education</label > </td>
+  <td> <input type="checkbox" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childLivesAway"></td>
+</tr>
+
+<tr>
+  <td><label for="Birth Number" class="col-form-label" > Child has been lived with someone else in the last 12 months</label > </td>
+  <td> <input type="checkbox" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childLivedSomeWhereElse"></td>
+
+   <td><label for="Birth Number" class="col-form-label" >  Child is in detention </label ></td>
+  <td> <input type="checkbox" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childLivesinDetention"></td>
+</tr>
+
+<tr>
+  <td><label for="Birth Number" class="col-form-label" > Someone else has claimed</label ></td>
+  <td> <select type="" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.someOneElseHasClaimed" class="form-control col-sm-7 input-sm"> <option value="YES">   Yes </option> <option value="NO">   No </option> </select></td>
+
+   <td><label for="Birth Number" class="col-form-label" >  Child will live with claimant from</label ></td>
+  <td> <input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childWillLiveWithClaimaintFrom"></td>
+</tr>
+
+<tr>
+  <td><label for="Birth Number" class="col-form-label" > Child lives with claimed</label > </td>
+  <td> <input type="checkbox" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childLivesWithClaimaint"></td>
+
+   <td> <label for="Birth Number" class="col-form-label" > Child placed for Adoption</label ></td>
+  <td> <input type="checkbox" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childPlacedForAdoption"></td>
+</tr>
+
+<tr>
+  <td><label for="Birth Number" class="col-form-label" >  claimed contribute to child's unkeep </label ></td>
+  <td> <input type="checkbox" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.claimtContribute"></td>
+
+   <td><label for="Birth Number" class="col-form-label" > Child Adopted</label ></td>
+  <td> <input type="checkbox" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childAdopted"></td>
+</tr>
+
+<tr>
+  <td> <label for="Birth Number" class="col-form-label" > child is in hospital</label >  </td>
+  <td> <input type="checkbox" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childIsinHospital"></td>
+
+   <td> <label for="Birth Number" class="col-form-label" > Child deceased</label > </td>
+  <td> <input type="checkbox" [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childDeceased"></td>
+</tr>
+
+<tr>
+  <td><label for="Birth Number" class="col-form-label" > From</label > </td>
+  <td> <input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childIsinHospitalFrom"></td>
+
+   <td> <label for="Birth Number" class="col-form-label" > Until</label > </td>
+  <td> <input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetail.childIsinHospitalTo"></td>
+</tr>
+
+<tr>
+  <td>  <label for="Birth Number" class="col-form-label" > Date of death</label > </td>
+  <td> <input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetail.dateOFDeath"></td>
+
+  
+</tr>
+
+ </table>
+        
+        
+        </div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse3">   <span  class="label">  <b>Advance Eligibilty Details -Child</b>  </span></a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse in">
+        <div class="panel-body">
+         <table class="table table-borderless">
+<tr>
+<td colspan="2" style="font-weight:bold" >Child lives or has lived with </td>  
+<td colspan="5" style="font-weight:bold">Someone else has claimed</td>
+</tr>
+
+<tr>
+<td> <label for="Birth Number" class="col-form-label" >Name</label > </td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.name"></td>    
+<td><label for="Birth Number" class="col-form-label" >Name</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.Claimantname"></td>    
+</tr>
+
+<tr>
+<td><label for="Birth Number" class="col-form-label" > Line 1</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.line1"></td>    
+<td><label for="Birth Number" class="col-form-label" > Line 1</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.Claimantline1"></td>    
+</tr>
+
+
+<tr>
+<td><label for="Birth Number" class="col-form-label" > Line 2</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.line2"></td>    
+<td><label for="Birth Number" class="col-form-label" > Line 2</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.Claimantline2"></td>    
+</tr>
+
+<tr>
+<td><label for="Birth Number" class="col-form-label" >Line 3</label > </td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.line3"></td>    
+<td><label for="Birth Number" class="col-form-label" >Line 3</label >  </td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.Claimantline3"></td>    
+</tr>
+
+<tr>
+<td><label for="Birth Number" class="col-form-label" > Line 4</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.line4"></td>    
+<td><label for="Birth Number" class="col-form-label" > Line 4</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.Claimantline4"></td>    
+</tr>
+
+<tr>
+<td><label for="Birth Number" class="col-form-label" > Line 5</label > </td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.line5"></td>    
+<td><label for="Birth Number" class="col-form-label" >  Line 4</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.Claimantline5"></td>    
+</tr>
+
+
+<tr>
+<td><label for="Birth Number" class="col-form-label" >PostCode</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.postcode"></td>    
+<td><label for="Birth Number" class="col-form-label" >PostCode</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.Claimantpostcode"></td>    
+</tr>
+
+<tr>
+<td><label for="Birth Number" class="col-form-label" >Country</label ></td>
+<td><select  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.Country"> <option *ngFor="let Country of countryList" value= {{Country.name}}>
+    {{Country.name}}
+  </option></select></td>    
+<td><label for="Birth Number" class="col-form-label" >Country</label ></td>
+<td><select  [(ngModel)]="chBClaimantDetails.eligibiltyDetailExtra.ClaimantCountry"> <option *ngFor="let Country of countryList" value= {{Country.name}}>
+    {{Country.name}}
+  </option> </select></td>    
+</tr>
+      </table>
+        
+        </div>
+      </div>
+    </div>
+
+
+<div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion2" href="#collapse4">       <span  class="label">  <b>Education Details Child</b>  </span> </a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse in">
+        <div class="panel-body">
+       <table  class="table table-borderless">
+<tr>
+<td colspan="2" style="font-weight:bold" >Education Details :</td>  
+
+</tr>
+
+<tr>
+<td> <label for="Birth Number" class="col-form-label" >Education or training for child aged 16 or over</label > </td>
+<td><input type="checkbox" [(ngModel)]="chBClaimantDetails.educationDetail.educatiionForChildOver16"></td>    
+</tr>
+
+<tr>
+<td> <label for="Birth Number" class="col-form-label" > Course/ Approved training beign taken</label > </td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.educationDetail.courseName"></td>    
+</tr>
+
+<tr>
+<td> <label for="Birth Number" class="col-form-label" >From:</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.educationDetail.courseFrom"></td>    
+
+<td> <label for="Birth Number" class="col-form-label" > Until:</label > </td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.educationDetail.courseUntil"></td>    
+</tr>
+
+<tr>
+  <td style="font-weight:bold">Name and address where course/approved training being taken</td>
+</tr>
+
+<tr>
+<td> <label for="Birth Number" class="col-form-label" >Name</label > </td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.educationDetail.name"></td>    
+
+</tr>
+
+<tr>
+<td> <label for="Birth Number" class="col-form-label" >Line 1</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.educationDetail.line1"></td>    
+
+</tr>
+
+
+<tr>
+<td> <label for="Birth Number" class="col-form-label" > Line 2</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.educationDetail.line2"></td>    
+
+</tr>
+
+<tr>
+<td> <label for="Birth Number" class="col-form-label" >Line 3</label > </td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.educationDetail.line3"></td>    
+
+</tr>
+
+<tr>
+<td> <label for="Birth Number" class="col-form-label" > Line 4</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.educationDetail.line4"></td>    
+
+</tr>
+
+<tr>
+<td> <label for="Birth Number" class="col-form-label" > Line 5</label ></td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.educationDetail.line5"></td>    
+
+</tr>
+
+
+<tr>
+<td> <label for="Birth Number" class="col-form-label" >PostCode</label > </td>
+<td><input type="text"  class="form-control col-sm-7"  [(ngModel)]="chBClaimantDetails.educationDetail.postcode"></td>    
+
+</tr>
+
+<tr>
+<td> <label for="Birth Number" class="col-form-label" > Country</label > </td>
+<td><select  [(ngModel)]="chBClaimantDetails.educationDetail.Country"> <option *ngFor="let Country of countryList" value= {{Country.name}}>
+    {{Country.name}}
+  </option> </select></td>    
+
+</tr>
+
+<tr>
+<td>  <label for="Birth Number" class="col-form-label" >Payment benefits being received</label > </td>
+<td><input type="checkbox" [(ngModel)]="chBClaimantDetails.educationDetail.paymentBenefitReceived"> </td>    
+
+</tr>
+      </table>
+        
+        </div>
+      </div>
+    </div>
+
+
+<div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion3" href="#collapse5"> <span  class="label">  <b>Other Child Details</b>  </span></a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <div id="outer">
+         <p-dataTable [value]="otherChildDetails">
+    <p-column field="surname" header="Surname"></p-column>
+    <p-column field="forename" header="Forename"></p-column>
+    <p-column field="otherForeName" header="Other ForeNames"></p-column>
+    <p-column field="gender" header="Gender"></p-column>
+    <p-column field="dateOfBirth" header="Date Of Birth"></p-column>
+     <p-column field="verified" header="Verified"></p-column>
+</p-dataTable>
+
+<div id="inner" class="row" *ngIf="otherChildDetails?.length <= 0">
+  <p align="center" >No Other Children</p>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+  <div  >
+  <table class="table table-borderless">
+    <tr>
+  <h6 style="font-weight:bold" >Actions :</h6> </tr>
+  <tr>
+  <a href="url">View Claim summary</a>
+  </tr>
+  <tr>
+  <a href="url"> View Claimant Details</a>
+  </tr>
+  <tr>
+  <a href="url">View Partner Details</a>
+  </tr>
+  </table>
+</div>
+
+<app-form-actions [group]="validationForm" parentPath="/child-benefits"></app-form-actions>

@@ -1,0 +1,107 @@
+<app-heading text="{{pageTitle}}"></app-heading>
+
+<div class="row">
+
+  <div class="col-xs-12 col-lg-4">
+
+    <app-subheading text="Search By:"></app-subheading>
+
+    <div class="btn-toolbar">
+      <div class="btn-group" role="group" data-toggle="buttons">
+        <label class="btn btn-default active" (click)="toggleNameAndORDOB($event)">
+          <input type="radio" name="options" id="option6">Name and/or DOB
+        </label>
+        <label class="btn btn-default" (click)="toggleBirthNumber($event)">
+          <input type="radio" name="options" id="option5">Birth Number
+        </label>
+      </div>
+    </div>
+
+    <br><br>
+
+  </div>
+
+  <div class="col-xs-12 col-lg-8">
+
+    <form name="nameAndORDOB" [hidden]="nameAndORDOB">
+
+      <app-subheading text="Name/DOB:"></app-subheading>
+
+      <div class="form-group">
+        <label for="firstName" class="control-label">First Name</label>
+        <input type="text"
+               name="firstName"
+               class="form-control"
+               id="firstName"
+               placeholder="First Name">
+      </div>
+
+      <div class="form-group">
+        <label for="otherNames" class="control-label">Other Names</label>
+        <input type="text"
+               name="otherNames"
+               [(ngModel)]="otherNames"
+               class="form-control"
+               id="otherNames"
+               placeholder="Other Names">
+      </div>
+
+      <div class="form-group">
+        <label for="inputSurname" class="control-label">Surname</label>
+        <input type="text"
+               name="surname"
+               [(ngModel)]="surname"
+               class="form-control"
+               id="surname"
+               placeholder="Surname">
+      </div>
+
+      <div class="form-group">
+        <label for="dateOfBirth" class="control-label">Date of birth</label>
+        <input type="text"
+               name="dateOfBirth"
+               [(ngModel)]="dateofBirth"
+               class="form-control"
+               id="dateofbirth"
+               placeholder="Date of Birth">
+      </div>
+
+      <button type="submit" class="btn btn-default">Search</button>
+
+    </form>
+
+    <form name="birthNumber" [hidden]="birthNumber">
+
+      <app-subheading text="Birth Number:"></app-subheading>
+
+      <div class="form-group">
+        <label for="birthNumber" class="control-label">Birth Number</label>
+        <input type="text"
+               (keyup.enter)="update(text.value)"
+               name="birthNumber"
+               [(ngModel)]="birthNumberValue"
+               class="form-control"
+               id="birthNumberValue"
+               placeholder="Birth Number">
+      </div>
+
+      <button type="submit" (click)=update(text.value) class="btn btn-default">Search</button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<hr>
+
+<app-subheading text="Child Details:"></app-subheading>
+
+<p-dataTable [value]="children" [paginator]="true" rows="5" [responsive]="true">
+  <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header"></p-column>
+  <p-column styleClass="col-button">
+    <template let-child="rowData" pTemplate="body">
+      <button type="button" pButton (click)="selectChildren(child);" icon="fa fa-search"></button>
+    </template>
+  </p-column>
+</p-dataTable>

@@ -1,0 +1,39 @@
+.borderless tr td {
+  border: none !important;
+  padding: 0px !important;
+}
+
+.table-borderless tbody tr td,
+.table-borderless tbody tr th,
+.table-borderless thead tr th,
+.table-borderless thead tr td,
+.table-borderless tfoot tr th,
+.table-borderless tfoot tr td {
+  border: none;
+}
+
+#inner {
+  display: table;
+  margin: 0 auto;
+}
+
+.div-right {
+  float: right;
+  width: 160px;
+}
+
+.div-centered {
+  margin: 0 auto;
+  text-align: left;
+  width: 800px;
+}
+
+.div-left {
+  float: left;
+  width: 100px;
+}
+
+div-container {
+  width: 100%;
+  text-align: center;
+}

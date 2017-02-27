@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HMRC Template</title>
+
+    <!-- Global -->
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link href="./templatestyles.css" rel="stylesheet">
+    
+</head>
+<body>
+
+	<!-- Header container -->
+    <header class="header">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <div class="dropdown">
+                    </div>
+
+                    <!-- Hamburger Icon -->
+                    <span _ngcontent-tlt-5="" aria-hidden="true" class="glyphicon glyphicon-menu-hamburger" id="hamburger-icon"></span>
+                    <!-- HMRC Logo -->
+                    <div class="navbar-brand">
+                        <a href="#/">
+                            <img class="brand-img" src="images/hmrc.png" />
+                            <span class="brand-text">HM Revenue & Customs</span>
+                        </a>
+                    </div>
+
+                    <!--<div class="collapse navbar-collapse " id="js-navbar-collapse">-->
+
+                    <!-- Search Component -->
+                    <div class="header-central-block input-group">
+                        <form class="form-wrapper form-search input-group-btn">
+                         	<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NINO <span class="caret"></span>
+                         	</button>
+                         <ul class="dropdown-menu">
+				          <li><a href="#">Action</a></li>
+				          <li><a href="#">Another action</a></li>
+				          <li><a href="#">Something else here</a></li>
+				          <li role="separator" class="divider"></li>
+				          <li><a href="#">Separated link</a></li>
+				        </ul>
+                        	<input _ngcontent-lkw-6="" name="search" placeholder="Search... (AB123456C)" type="search" required="">
+                        	<button type="submit"><span class="fa fa-search"></span></button>
+                        </form>
+                    </div>
+
+                    <!-- Header Icons Container  -->
+                    <div class="header-right pull-right" ng-controller="RightMenuTopCtrl">
+                        <ul class="header-icons list-inline icons">
+                            <li>
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-cog" ng-click="openDummyModal();"></i>
+                                </a>
+                            </li>
+                        	<li>
+                            	<a href="#">
+                                   <i class="glyphicon glyphicon-print" ng-click="openDummyModal();"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-info-sign" ng-click="openDummyModal();"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#/">
+                                    <i class="glyphicon glyphicon-log-out"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End of Header Container  -->
+
+    <!-- Parent Body Container  -->
+    <main class="parent-container container" style="">
+    	<!-- Breadcrumb Container -->
+    	<div class="breadcrumb-container container">
+    		<ul class="breadcrumb">
+    			<li class="Breadcrumb-item"><a href="#">Dashboard</a></li>
+    			<li class="Breadcrumb-item"><a href="#">Child Benefit</a></li>
+    			<li class="Breadcrumb-item">Child Details</li>
+    		</ul>
+    	</div>
+
+    	<!-- Side Container -->
+    	<aside class="secondary-container side-menu" style="">
+            <div class="ticker-container">
+                <label class="ticker-label">NINO:</label>
+                <span class="ticker-info">NL12345D</span>
+                <BR />
+                <!-- <hr class="divider"></hr> -->
+                <label class="ticker-label">D.O.B:</label>
+                <span class="ticker-info">20/02/1991</span>
+                <br />
+                <!-- <hr class="divider"></hr> -->
+                <label class="ticker-label">Address:</label>
+                <span class="ticker-info">12 Merry Lane, Newcastle</span>
+                <!-- <hr class="divider" /> -->
+            </div>
+    		<div class="primary-navigation">
+    			<ul class="nav-stacked">
+    				<li><a href="#">Child Benefit</a></li>
+    				<li><a href="#">Claim Summary</a></li>
+    				<li><a href="#">Child Search</a>
+                        <ul class="nav-stacked-inner">
+                            <li><a href="#">List 1</a></li>
+                            <li><a href="#">List 2</a></li>
+                            <li><a href="#">List 3</a></li>
+                        </ul>
+                    </li>
+    				<li><a href="#">Child Claimant Partner</a></li>
+    				<li><a href="#">Claimant Child Details</a></li>
+    			</ul>
+    		</div>
+    	</aside>
+
+    	<!-- Main Template Container  -->
+    	<div class="primary-container col-lg-9 col-md-9" style="">
+    		<div class="central-container content">
+
+			<fieldset class="fieldset">
+
+            <!-- SECTION TITLE -->
+            <div class="row">
+                <legend class="col-lg-12">Additional Details</legend>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="form-input">
+                        <label class='control-label' for='input1'>Marriage / CP status</label>
+                        <div class="controls">
+                            <input type='text' class='form-control' ng-model='PayeIndividualSummaryModel.additional.marriageStatus' value="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="form-input">
+                        <label class='control-label' for='input1'>Gender</label>
+                        <div class="controls">
+                            <input type='text' class='form-control' ng-model='PayeIndividualSummaryModel.additional.gender' value="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="form-input">
+                        <label class='control-label' for='input1'>Date of Birth</label>
+                        <div class="controls">
+                            <input type='text' name="dob" datepicker="" class='form-control' placeholder="__/__/____" value="" />
+                            <span class="add-on">
+                                <label for="dob">
+                            <span class="glyphicon glyphicon-calendar" />
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="form-input">
+                        <label class='control-label' for='input1'>Date of Death</label>
+                        <div class="controls">
+                            <input type='text' name="dod" datepicker="" class='form-control' ui-date placeholder="__/__/____" ng-model='PayeIndividualSummaryModel.additional.dateOfDeath' value="" />
+                            <span class="add-on">
+                                <label for="dod">
+                            <span class="glyphicon glyphicon-calendar" />
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="form-input">
+                        <label class='control-label' for='input1'>Date of Leaving UK</label>
+                        <div class="controls">
+                            <input type='text' name="dolUK"  datepicker="" class='form-control' ui-date placeholder="__/__/____" ng-model='PayeIndividualSummaryModel.additional.dateOfLeaving' value="" />
+                            <span class="add-on">
+                                <label for="dolUK">
+                            <span class="glyphicon glyphicon-calendar" />
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="form-input">
+                        <label class='control-label' for='input1'>Date of Returning to UK</label>
+                        <div class="controls">
+                            <input type='text' name="dorUK" datepicker="" class='form-control' ui-date placeholder="__/__/____" ng-model='PayeIndividualSummaryModel.additional.dateOfReturning' value="" />
+                            <span class="add-on">
+                                <label for="dorUK">
+                            <span class="glyphicon glyphicon-calendar" />
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-input">
+                        <label class='control-label' for='input1'>Specialist Business Area</label>
+                        <div class="controls">
+                            <input type='text' class='form-control' ng-model='PayeIndividualSummaryModel.additional.SBA' value="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-input">
+                        <label class='control-label' for='input1'>Merge Status</label>
+                        <div class="controls">
+                            <input type='text' class='form-control' ng-model='PayeIndividualSummaryModel.additional.mergeStatus' value="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <hr class="divider"></hr>
+
+        <div class="row">
+        	<div class="col-md-12">
+        	<fieldset class="fieldset">
+        		<legend>ITMP Table</legend>
+	        	<table class="table table-bordered table-hover">
+				    <thead>
+				      <tr>
+				        <th>Claim Number</th>
+				        <th>Claim Version</th>
+				        <th>Claim Names</th>
+				        <th>Action</th>
+				        <th>Award Type</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>Value</td>
+				        <td>Value</td>
+				        <td>John Smith</td>
+				        <td>Update</td>
+				        <td>Addtional CHB Claim</td>
+				      </tr>
+				      <tr class="row-success">
+				        <td>Value</td>
+				        <td>Value</td>
+				        <td>John Smith</td>
+				        <td>Update</td>
+				        <td>Addtional CHB Claim</td>
+				      </tr>
+				      <tr>
+				        <td>Value</td>
+				        <td>Value</td>
+				        <td>John Smith</td>
+				        <td>Update</td>
+				        <td>Addtional CHB Claim</td>
+				      </tr>
+				      <tr class="row-alert">
+				        <td>Value</td>
+				        <td>Value</td>
+				        <td>John Smith</td>
+				        <td>Update</td>
+				        <td>Addtional CHB Claim</td>
+				      </tr>
+				      <tr class="row-new">
+				        <td>Value</td>
+				        <td>Value</td>
+				        <td>John Smith</td>
+				        <td>Update</td>
+				        <td>Addtional CHB Claim</td>
+				      </tr>
+				    </tbody>
+				  </table>
+			  </fieldset>
+        	</div>
+        </div>
+        <!-- Buttons Container Styles -->
+
+        <div class="buttons-container blocked">
+        	<!-- Buttons Styling -->
+        	<button class="btn btn-danger pull-left">Cancel</button>
+
+        	<div class="pull-right">
+	        	<button class="btn btn-default">Edit</button>
+	        	<button class="btn btn-primary">Save</button>
+        	</div>
+        </div>
+
+    		</div>
+    	</div>
+    </main>
+</body>
+</html>
