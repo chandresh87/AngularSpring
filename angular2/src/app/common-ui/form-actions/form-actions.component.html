@@ -1,9 +1,0 @@
-<ng-container *ngIf="this.group">
-  <div class="buttons-container blocked">
-    <a routerLink="{{parentPath}}" class="btn btn-danger">Cancel</a>
-    <button type="reset" class="btn btn-default">Reset</button>
-    <div class="pull-right">
-      <button type="submit" class="btn btn-primary" [disabled]="!this.group.valid">Save</button>
-    </div>
-  </div>
-</ng-container>
